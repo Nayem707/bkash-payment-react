@@ -5,7 +5,7 @@ const Chekout = () => {
   const pay = async () => {
     try {
       const { data } = await axios.post(
-        'http://localhost:5000/api/bkash/payment/create',
+        'https://bkash-payment-490.onrender.com/api/bkash/payment/create',
         { amount: 407, orderId: 1 },
         { withCredentials: true }
       );
