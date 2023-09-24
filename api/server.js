@@ -12,9 +12,9 @@ app.use(
     credentials: true,
   })
 );
+
 dotEnv.config();
 app.use(body_parser.json());
-
 app.use('/api', require('./routes/routes'));
 
 const db = async () => {
@@ -29,5 +29,4 @@ const db = async () => {
 const port = process.env.PORT;
 app.get('/', (req, res) => res.send('server is running'));
 app.listen(port, () => console.log(`Example app listening on port ${port}!`));
-
 db();

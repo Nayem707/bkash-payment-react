@@ -2,6 +2,7 @@ const axios = require('axios');
 const paymentModel = require('../model/paymentModel');
 const globals = require('node-global-storage');
 const { v4: uuidv4 } = require('uuid');
+
 class paymentController {
   bkash_headers = async () => {
     return {
@@ -53,7 +54,6 @@ class paymentController {
           }
         );
         if (data && data.statusCode === '0000') {
-          //const userId = globals.get('userId')
           await paymentModel.create({
             userId: Math.random() * 10 + 1,
             paymentID,
