@@ -8,7 +8,7 @@ const app = express();
 
 app.use(
   cors({
-    origin: 'https://bkash-payment-490.netlify.app',
+    origin: 'http://localhost:5173',
     credentials: true,
   })
 );
@@ -30,3 +30,5 @@ const port = process.env.PORT;
 app.get('/', (req, res) => res.send('server is running'));
 app.listen(port, () => console.log(`Example app listening on port ${port}!`));
 db();
+
+// ni62336147801@@@
